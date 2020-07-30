@@ -1,0 +1,13 @@
+version: '3'
+services:
+  redis-server:
+    image:  'redis'
+  node-app:
+    researt: always
+    # build from current dir
+    build: .
+    ports:
+    # - is for array in docker-compose
+    # first port is in our machine,
+    # the second is the port inside the container
+      - "8081:8081"
